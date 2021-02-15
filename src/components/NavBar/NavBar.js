@@ -5,7 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "./NavBar.css";
 import { Button } from "../Button/Button.js";
 
-function Navbar() {
+function NavBar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -38,24 +38,30 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/" className="nav-links">
-              Services
+            <Link to="/demo" className="nav-links">
+              Demo
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/" className="nav-links">
+            <Link to="/plans" className="nav-links">
               Plans
             </Link>
           </li>
           <li className="nav-btn">
             {button ? (
-              <Link>
-                <Button buttonStyle="btn-style-outline">Sign Up</Button>
-              </Link>
-            ) : (
-              <Link>
+              <Link to="/sign-up" className="btn-link">
                 <Button
                   buttonStyle="btn-style-outline"
+                  buttonFont="btn-font-default"
+                >
+                  Sign Up
+                </Button>
+              </Link>
+            ) : (
+              <Link to="/sign-up" className="btn-link">
+                <Button
+                  buttonStyle="btn-style-outline"
+                  buttonSize="btn-size-mobile"
                   buttonFont="btn-font-default"
                 >
                   Sign Up
@@ -69,4 +75,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
