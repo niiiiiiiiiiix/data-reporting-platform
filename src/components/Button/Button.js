@@ -13,6 +13,10 @@ const sizes = ["btn-size-default", "btn-size-mobile"];
 // along with alt colour
 const colors = ["btn-color-default", "btn-color-alt"];
 
+// set default font of button
+// along with alt colour
+const font = ["btn-font-default", "btn-font-alt"];
+
 export const Button = ({
   children,
   onClick,
@@ -20,6 +24,7 @@ export const Button = ({
   buttonStyle,
   buttonSize,
   buttonColor,
+  buttonFont,
 }) => {
   // if there is a set styling, then we will use that style
   // else it'll automatically use the default styling set above i.e. primary styling
@@ -33,9 +38,11 @@ export const Button = ({
     ? buttonColor
     : colors[0];
 
+  const checkButtonFont = styles.includes(buttonFont) ? buttonFont : font[0];
+
   return (
     <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
+      className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor} ${checkButtonFont}`}
       onClick={onClick}
       type={type}
     >

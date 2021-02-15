@@ -50,11 +50,16 @@ function Navbar() {
           <li className="nav-btn">
             {button ? (
               <Link>
-                <Button>Sign Up</Button>
+                <Button buttonStyle="btn-style-outline">Sign Up</Button>
               </Link>
             ) : (
               <Link>
-                <Button>Sign Up</Button>
+                <Button
+                  buttonStyle="btn-style-outline"
+                  buttonFont="btn-font-default"
+                >
+                  Sign Up
+                </Button>
               </Link>
             )}
           </li>
