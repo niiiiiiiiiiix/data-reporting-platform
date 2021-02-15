@@ -3,11 +3,23 @@ import { Link } from "react-router-dom";
 import { WiDaySunny } from "react-icons/wi";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./NavBar.css";
+import { Button } from "../Button/Button.js";
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  window.addEventListener("resize", showButton);
 
   return (
     <div className="navbar">
@@ -36,7 +48,15 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-btn">
-            <button type="button">Sign Up</button>
+            {button ? (
+              <Link>
+                <Button>Sign Up</Button>
+              </Link>
+            ) : (
+              <Link>
+                <Button>Sign Up</Button>
+              </Link>
+            )}
           </li>
         </ul>
       </div>
