@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { WiDaySunny } from "react-icons/wi";
 import { FaBars, FaTimes } from "react-icons/fa";
+import "./NavBar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -13,7 +14,7 @@ function Navbar() {
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo">
           <WiDaySunny className="navbar-icon" />
-          EXCELLENT TITLE, MUCH WOW, SUCH COOL
+          SUNNY
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}
