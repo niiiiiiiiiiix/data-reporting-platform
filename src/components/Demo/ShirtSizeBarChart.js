@@ -1,17 +1,17 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { allShirtSize, countShirtSize } from "./Dataset/shirtSizeData";
+import { objectShirtSize } from "./Dataset/dataManipulated";
 
 const ShirtSizeBarChart = () => {
   return (
     <div>
       <Bar
         data={{
-          labels: allShirtSize,
+          labels: Object.keys(objectShirtSize),
 
           datasets: [
             {
-              data: countShirtSize,
+              data: Object.values(objectShirtSize),
               backgroundColor: [
                 "rgba(0, 76, 109, 1)",
                 "rgba(45, 100, 132, 1)",

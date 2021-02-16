@@ -1,22 +1,17 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { allGenders, countGender } from "./Dataset/genderData";
-import { allIncome, allIncomeSorted, data } from "./Dataset/incomeData";
-
-console.log(allIncome);
-console.log(allIncomeSorted);
-console.log(data);
+import { objectIncomeMonth } from "./Dataset/dataManipulated";
 
 const IncomeAreaChart = () => {
   return (
     <div>
       <Bar
         data={{
-          labels: allGenders,
+          labels: Object.keys(objectIncomeMonth),
 
           datasets: [
             {
-              data: countGender,
+              data: Object.values(objectIncomeMonth),
               backgroundColor: [
                 "rgba(0, 63, 92, 1)",
                 "rgba(47, 75, 124, 1)",

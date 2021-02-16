@@ -1,18 +1,20 @@
 import React from "react";
 import { Pie } from "react-chartjs-2";
 import "chart.piecelabel.js"; //https://github.com/emn178/chartjs-plugin-labels
-import { allGenders, countGender } from "./Dataset/genderData";
+import { objectGender } from "./Dataset/dataManipulated";
+
+console.log(objectGender);
 
 const GenderPieChart = () => {
   return (
     <div>
       <Pie
         data={{
-          labels: allGenders,
+          labels: Object.keys(objectGender),
 
           datasets: [
             {
-              data: countGender,
+              data: Object.values(objectGender),
               backgroundColor: [
                 "rgba(0, 63, 92, 1)",
                 "rgba(47, 75, 124, 1)",
