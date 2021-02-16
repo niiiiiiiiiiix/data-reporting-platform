@@ -7,9 +7,9 @@ function Demo() {
     <div>
       <h1>This is your demo page</h1>
       <div>
-        <div>
+        {/* <div>
           <BarChart />
-        </div>
+        </div> */}
         <div>
           <PieChart />
         </div>
