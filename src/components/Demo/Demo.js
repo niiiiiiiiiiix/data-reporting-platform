@@ -9,6 +9,7 @@ function Demo() {
       <div>
         <BarChart />
       </div>
+
       <div>
         <data />
       </div>
