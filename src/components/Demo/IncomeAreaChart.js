@@ -2,6 +2,8 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 import { objectIncomeMonth } from "./Dataset/dataManipulated";
 
+let ticks = [0, 25, 50, 100];
+
 const IncomeAreaChart = () => {
   return (
     <div>
@@ -12,47 +14,10 @@ const IncomeAreaChart = () => {
           datasets: [
             {
               data: Object.values(objectIncomeMonth),
-              backgroundColor: [
-                "rgba(0, 63, 92, 1)",
-                "rgba(47, 75, 124, 1)",
-                "rgba(102, 81, 145, 1)",
-                "rgba(160, 81, 149, 1)",
-                "rgba(212, 80, 135, 1)",
-                "rgba(249, 93, 106, 1)",
-                "rgba(255, 124, 67, 1)",
-                "rgba(255, 166, 0, 1)",
-              ],
-              borderColor: [
-                "rgba(0, 63, 92, 1)",
-                "rgba(47, 75, 124, 1)",
-                "rgba(102, 81, 145, 1)",
-                "rgba(160, 81, 149, 1)",
-                "rgba(212, 80, 135, 1)",
-                "rgba(249, 93, 106, 1)",
-                "rgba(255, 124, 67, 1)",
-                "rgba(255, 166, 0, 1)",
-              ],
-              borderWidth: 1,
-              hoverBackgroundColor: [
-                "rgba(0, 63, 92, 0.8)",
-                "rgba(47, 75, 124, 0.8)",
-                "rgba(102, 81, 145, 0.8)",
-                "rgba(160, 81, 149, 0.8)",
-                "rgba(212, 80, 135, 0.8)",
-                "rgba(249, 93, 106, 0.8)",
-                "rgba(255, 124, 67, 0.8)",
-                "rgba(255, 166, 0, 0.8)",
-              ],
-              hoverBorderColor: [
-                "rgba(0, 63, 92, 0.8)",
-                "rgba(47, 75, 124, 0.8)",
-                "rgba(102, 81, 145, 0.8)",
-                "rgba(160, 81, 149, 0.8)",
-                "rgba(212, 80, 135, 0.8)",
-                "rgba(249, 93, 106, 0.8)",
-                "rgba(255, 124, 67, 0.8)",
-                "rgba(255, 166, 0, 0.8)",
-              ],
+              backgroundColor: "rgba(240, 128, 128, 1)",
+              borderColor: "rgba(240, 128, 128, 1)",
+              hoverBackgroundColor: "rgba(240, 128, 128, 0.8)",
+              hoverBorderColor: "rgba(240, 128, 128, 0.8)",
             },
           ],
         }}
@@ -65,14 +30,6 @@ const IncomeAreaChart = () => {
               boxWidth: 15,
               padding: 15,
             },
-          },
-          pieceLabel: {
-            render: "percentage",
-            fontColor: "#fff",
-            precision: 1,
-            position: "border",
-            fontStyle: "bold",
-            fontSize: 14,
           },
           title: {
             display: true,
@@ -88,17 +45,18 @@ const IncomeAreaChart = () => {
                   display: false,
                 },
                 ticks: {
-                  display: false,
+                  beginAtZero: true,
+                  maxTicksLimit: 10,
                 },
               },
             ],
             yAxes: [
               {
-                ticks: {
-                  display: false,
-                },
                 gridLines: {
-                  display: false,
+                  display: true,
+                },
+                ticks: {
+                  min: 0,
                 },
               },
             ],

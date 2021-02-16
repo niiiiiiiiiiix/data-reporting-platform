@@ -8,7 +8,7 @@ const data = [
     email: "cscroggie0@ocn.ne.jp",
     gender: "Genderfluid",
     shirtSize: "3XL",
-    incomeMonth: 46,
+    incomeMonth: 0,
   },
   {
     id: 2,
