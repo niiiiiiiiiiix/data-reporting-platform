@@ -1,8 +1,6 @@
 import React from "react";
-import { Bar, defaults } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { allShirtSize, countShirtSize } from "./Dataset/shirtSizeData";
-
-defaults.global.legend.display = false;
 
 const ShirtSizeBarChart = () => {
   return (
@@ -57,11 +55,8 @@ const ShirtSizeBarChart = () => {
         height={400}
         width={600}
         options={{
-          layout: {
-            padding: {
-              left: 350,
-              right: 350,
-            },
+          legend: {
+            display: false,
           },
           title: {
             display: true,

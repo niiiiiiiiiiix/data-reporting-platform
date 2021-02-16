@@ -1,5 +1,6 @@
 import React from "react";
 import GenderPieChart from "./GenderPieChart";
+import IncomeAreaChart from "./IncomeAreaChart";
 import ShirtSizeBarChart from "./ShirtSizeBarChart";
 
 function Demo() {
@@ -7,14 +8,14 @@ function Demo() {
     <div>
       <h1>This is your demo page</h1>
       <div>
-        {/* <div>
-          <BarChart />
-        </div> */}
         <div>
           <GenderPieChart />
         </div>
         <div>
           <ShirtSizeBarChart />
+        </div>
+        <div>
+          <IncomeAreaChart />
         </div>
       </div>
 

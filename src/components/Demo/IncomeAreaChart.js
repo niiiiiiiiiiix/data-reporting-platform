@@ -1,12 +1,16 @@
 import React from "react";
-import { Pie } from "react-chartjs-2";
-import "chart.piecelabel.js"; //https://github.com/emn178/chartjs-plugin-labels
+import { Bar } from "react-chartjs-2";
 import { allGenders, countGender } from "./Dataset/genderData";
+import { allIncome, allIncomeSorted, data } from "./Dataset/incomeData";
 
-const GenderPieChart = () => {
+console.log(allIncome);
+console.log(allIncomeSorted);
+console.log(data);
+
+const IncomeAreaChart = () => {
   return (
     <div>
-      <Pie
+      <Bar
         data={{
           labels: allGenders,
 
@@ -77,7 +81,7 @@ const GenderPieChart = () => {
           },
           title: {
             display: true,
-            text: "Gender Distribution",
+            text: "Income Distribution",
             fontSize: 24,
             padding: 24,
           },
@@ -110,4 +114,4 @@ const GenderPieChart = () => {
   );
 };
 
-export default GenderPieChart;
+export default IncomeAreaChart;
