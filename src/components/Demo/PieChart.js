@@ -1,16 +1,10 @@
 import React from "react";
 import { Pie, defaults } from "react-chartjs-2";
-import data from "./data";
+import { allGenders, allShirtSize, allIncome } from "./Dataset/extractedData";
 
-console.log(data[0].gender);
-
-let allGenders = [...new Set(data.map((item) => item.gender))];
 console.log(allGenders);
-
-// for (let g = 0; g < data.length; g++) {
-//   if (data[i].gender)
-
-// }
+console.log(allShirtSize);
+console.log(allIncome);
 
 defaults.global.legend.position = "bottom";
 
