@@ -1,12 +1,23 @@
 import React from "react";
-import { Bar, defaults } from "react-chartjs-2";
+import { Pie, defaults } from "react-chartjs-2";
+import data from "./data";
+
+console.log(data[0].gender);
+
+let allGenders = [...new Set(data.map((item) => item.gender))];
+console.log(allGenders);
+
+// for (let g = 0; g < data.length; g++) {
+//   if (data[i].gender)
+
+// }
 
 defaults.global.legend.position = "bottom";
 
-const BarChart = () => {
+const PieChart = () => {
   return (
     <div>
-      <Bar
+      <Pie
         data={{
           labels: ["Item 1", "Item 2", "Item 3"],
 
@@ -74,4 +85,4 @@ const BarChart = () => {
   );
 };
 
-export default BarChart;
+export default PieChart;

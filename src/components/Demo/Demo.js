@@ -1,13 +1,18 @@
 import React from "react";
 import BarChart from "./BarChart";
-import data from "./data";
+import PieChart from "./PieChart";
 
 function Demo() {
   return (
     <div>
       <h1>This is your demo page</h1>
       <div>
-        <BarChart />
+        <div>
+          <BarChart />
+        </div>
+        <div>
+          <PieChart />
+        </div>
       </div>
 
       <div>
