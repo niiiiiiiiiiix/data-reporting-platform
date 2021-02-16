@@ -1,4 +1,4 @@
-export const randomData = [
+const data = [
   {
     id: 1,
     firstName: "Kalinda",
@@ -9000,3 +9000,5 @@ export const randomData = [
     incomeMonth: 8079,
   },
 ];
+
+export default data;
