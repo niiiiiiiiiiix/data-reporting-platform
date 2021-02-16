@@ -54,8 +54,8 @@ const countGender = [
   countNB,
 ];
 
-const percentageGender = countGender.map(
-  (count) => count / countGender.reduce((a, b) => a + b)
-);
+// const percentageGender = countGender.map(
+//   (count) => count / countGender.reduce((a, b) => a + b)
+// );
 
-export { allGenders, countGender, percentageGender };
+export { allGenders, countGender };

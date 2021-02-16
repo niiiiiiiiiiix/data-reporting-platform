@@ -1,6 +1,6 @@
 import React from "react";
-import BarChart from "./BarChart";
-import PieChart from "./PieChart";
+import GenderPieChart from "./GenderPieChart";
+import ShirtSizeBarChart from "./ShirtSizeBarChart";
 
 function Demo() {
   return (
@@ -11,7 +11,10 @@ function Demo() {
           <BarChart />
         </div> */}
         <div>
-          <PieChart />
+          <GenderPieChart />
+        </div>
+        <div>
+          <ShirtSizeBarChart />
         </div>
       </div>
 
