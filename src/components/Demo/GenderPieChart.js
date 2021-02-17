@@ -3,7 +3,7 @@ import { Pie } from "react-chartjs-2";
 import "chart.piecelabel.js"; //https://github.com/emn178/chartjs-plugin-labels
 import { objectGender } from "./Dataset/dataManipulated";
 
-console.log(objectGender);
+// console.log(objectGender);
 
 const GenderPieChart = () => {
   return (

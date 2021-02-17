@@ -2,8 +2,6 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 import { objectIncomeMonth } from "./Dataset/dataManipulated";
 
-let ticks = [0, 25, 50, 100];
-
 const IncomeAreaChart = () => {
   return (
     <div>
