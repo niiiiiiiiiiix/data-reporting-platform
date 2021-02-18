@@ -1,15 +1,22 @@
-.test {
-  width: 120px;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 1rem;
-  background-color: #29e;
-  color: white;
-  font-size: 20px;
-  font-family: sans-serif;
+.bodyy {
+  margin: 0;
+}
 
-  touch-action: none;
+.container {
+  background-color: #333;
+  padding: 1rem;
+  margin-top: 1rem;
+}
 
-  /* This makes things *much* easier */
-  box-sizing: border-box;
+.draggable {
+  padding: 1rem;
+  background-color: grey;
+  border: 1px solid black;
+  cursor: move;
+  margin-top: 21.44px;
+  margin-bottom: 21.44px;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
 }

@@ -2,55 +2,69 @@ import React from "react";
 import GenderPieChart from "./GenderPieChart";
 import IncomeAreaChart from "./IncomeAreaChart";
 import ShirtSizeBarChart from "./ShirtSizeBarChart";
-import interact from "interactjs";
+// import Draggable from "react-draggable";
 import "./Demo.css";
 
-// target elements with the "draggable" class
-interact(".test").draggable({
-  //enable inertial throwing
-  inertia: true,
-  // keep the element within the area of it's parent
-  modifiers: [
-    interact.modifiers.restrictRect({
-      restrictions: "parent",
-      endOnly: true,
-    }),
-  ],
-  // enable autoScroll
-  autoScroll: true,
-  listeners: {
-    // call this function on every dragmove event
-    move: dragMoveListener,
-  },
+const draggables = document.querySelectorAll(".draggable");
+const containers = document.querySelectorAll(".container");
+
+draggables.forEach((draggable) => {
+  draggable.addEventListener("dragstart", () => {
+    draggable.classList.add("dragging");
+  });
+  draggable.addEventListener("dragend", () => {
+    draggable.classList.remove("dragging");
+  });
 });
 
-function dragMoveListener(event) {
-  let target = event.target;
-  // keep the dragged position in the data-x/data-y attributes
-  let x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
-  var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+containers.forEach((container) => {
+  container.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(container, e.clientY);
+    const draggable = document.querySelector(".dragging");
+    if (afterElement == null) {
+      container.appendChild(draggable);
+    } else {
+      container.insertBefore(draggable, afterElement);
+    }
+  });
+});
 
-  // translate the element
-  target.style.webkitTransform = target.style.transform =
-    "translate(" + x + "px, " + y + "px)";
+function getDragAfterElement(container, y) {
+  const draggableElements = [
+    ...container.querySelectorAll(".draggable:not(.dragging)"),
+  ];
 
-  //update the position attributes
-  target.setAttribute("data-x", x);
-  target.setAttribute("data-y", y);
+  return draggableElements.reduce(
+    (closest, child) => {
+      const box = child.getBoundingClientRect();
+      const offset = y - box.top - box.height / 2;
+      if (offset < 0 && offset > closest.offset) {
+        return { offset: offset, element: child };
+      } else {
+        return closest;
+      }
+    },
+    { offset: Number.NEGATIVE_INFINITY }
+  ).element;
 }
 
 function Demo() {
   return (
-    <div>
-      <h1 className="test">This is your demo page</h1>
+    <div className="bodyy">
       <div className="container">
-        <div>
+        <h1 className="draggable" draggable="true">
+          This is your demo page
+        </h1>
+        <div className="draggable" draggable="true">
           <GenderPieChart />
         </div>
-        <div>
+      </div>
+      <div className="container">
+        <div className="draggable" draggable="true">
           <ShirtSizeBarChart />
         </div>
-        <div>
+        <div className="draggable" draggable="true">
           <IncomeAreaChart />
         </div>
       </div>
