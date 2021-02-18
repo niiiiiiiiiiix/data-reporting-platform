@@ -10,9 +10,10 @@ function NavBar() {
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
-    if (window.innerWidth <= 720) {
+    if (window.innerWidth <= 767) {
       setButton(false);
     } else {
       setButton(true);
@@ -30,17 +31,17 @@ function NavBar() {
         </Link>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/" className="nav-links">
+            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/demo" className="nav-links">
+            <Link to="/demo" className="nav-links" onClick={closeMobileMenu}>
               Demo
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/plans" className="nav-links">
+            <Link to="/plans" className="nav-links" onClick={closeMobileMenu}>
               Plans
             </Link>
           </li>
