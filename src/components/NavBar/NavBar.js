@@ -29,6 +29,9 @@ function NavBar() {
           <WiDaySunny className="navbar-icon" />
           SUNNY
         </Link>
+        <div className="menu-icon" onClick={handleClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -68,9 +71,6 @@ function NavBar() {
             )}
           </li>
         </ul>
-        <div className="menu-icon" onClick={handleClick}>
-          {click ? <FaTimes /> : <FaBars />}
-        </div>
       </div>
     </div>
   );
