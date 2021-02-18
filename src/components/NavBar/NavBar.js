@@ -72,7 +72,7 @@ function NavBar() {
           </li>
           <li className="nav-btn">
             {button ? (
-              <Link to="/sign-up" className="btn-link">
+              <Link to="/sign-in" className="btn-link">
                 <Button
                   buttonStyle="btn-style-outline"
                   buttonFont="btn-font-default"
@@ -81,7 +81,7 @@ function NavBar() {
                 </Button>
               </Link>
             ) : (
-              <Link to="/sign-up" className="btn-link">
+              <Link to="/sign-in" className="btn-link">
                 <Button
                   buttonStyle="btn-style-outline"
                   buttonSize="btn-size-mobile"
