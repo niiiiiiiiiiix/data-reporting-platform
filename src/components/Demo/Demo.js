@@ -93,26 +93,24 @@ function getDragAfterElement(container, y) {
 
 function Demo() {
   return (
-    <div className="bodyy">
-      <div className="container">
-        <h1 className="draggable" draggable="true">
-          This is your demo page
-        </h1>
-        <div className="draggable" draggable="true">
-          <GenderPieChart />
+    <div>
+      <div className="bodyy">
+        <div className="demo-container">
+          <h1 className="draggable" draggable="true">
+            This is your demo page
+          </h1>
+          <div className="draggable" draggable="true">
+            <GenderPieChart />
+          </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="draggable" draggable="true">
-          <ShirtSizeBarChart />
+        <div className="demo-container">
+          <div className="draggable" draggable="true">
+            <ShirtSizeBarChart />
+          </div>
+          <div className="draggable" draggable="true">
+            <IncomeAreaChart />
+          </div>
         </div>
-        <div className="draggable" draggable="true">
-          <IncomeAreaChart />
-        </div>
-      </div>
-
-      <div>
-        <data />
       </div>
     </div>
   );

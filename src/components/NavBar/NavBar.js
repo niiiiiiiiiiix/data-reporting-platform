@@ -12,7 +12,7 @@ function NavBar() {
   const handleClick = () => setClick(!click);
 
   const showButton = () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 720) {
       setButton(false);
     } else {
       setButton(true);
@@ -28,9 +28,6 @@ function NavBar() {
           <WiDaySunny className="navbar-icon" />
           SUNNY
         </Link>
-        <div className="menu-icon" onClick={handleClick}>
-          {click ? <FaTimes /> : <FaBars />}
-        </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links">
@@ -70,6 +67,9 @@ function NavBar() {
             )}
           </li>
         </ul>
+        <div className="menu-icon" onClick={handleClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
     </div>
   );
