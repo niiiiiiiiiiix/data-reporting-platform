@@ -2,6 +2,7 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import "chart.piecelabel.js"; //https://github.com/emn178/chartjs-plugin-labels
 import { objectGender } from "./Dataset/dataManipulated";
+import "./Demo.css";
 
 // console.log(objectGender);
 

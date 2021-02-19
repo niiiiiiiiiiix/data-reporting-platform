@@ -2,9 +2,13 @@ import React from "react";
 
 const FormSuccess = () => {
   return (
-    <div className="form-content-right">
-      <div className="form-success">We have received your request!</div>
-      <img src="images/queen.svg" alt="" className="form-img-2" />
+    <div className="form ">
+      <div className="form-success">
+        We have received your request! <br /> Great decision!
+      </div>
+      <div className="stonks-container">
+        <img src="images/stonks.jpg" alt="" className="form-stonks" />
+      </div>
     </div>
   );
 };

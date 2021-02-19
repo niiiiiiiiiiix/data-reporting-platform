@@ -1,15 +1,16 @@
 .bodyy {
-  margin: 0;
+  margin-top: 80px;
+  background-color: #152238;
 }
 
 .demo-container {
   /* background-color: #333; */
   padding: 1rem;
+  padding-top: 0;
   margin-top: 1rem;
 }
 
 .draggable {
-  padding: 1rem;
   background-color: #fff;
   border: 1px solid black;
   cursor: move;
@@ -19,4 +20,12 @@
 
 .draggable.dragging {
   opacity: 0.5;
+}
+
+canvas {
+  background-color: #f5f5f5;
+}
+
+canvas.chartjs-render-monitor {
+  border: 0;
 }

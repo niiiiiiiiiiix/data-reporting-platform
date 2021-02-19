@@ -8,14 +8,12 @@ function Demo() {
   return (
     <div className="bodyy">
       <div className="demo-container">
-        <h1 className="draggable" draggable="true">
+        {/* <h1 className="draggable" draggable="true">
           This is your demo page
-        </h1>
+        </h1> */}
         <div className="draggable" draggable="true">
           <GenderPieChart />
         </div>
-      </div>
-      <div className="demo-container">
         <div className="draggable" draggable="true">
           <ShirtSizeBarChart />
         </div>
@@ -23,6 +21,9 @@ function Demo() {
           <IncomeAreaChart />
         </div>
       </div>
+      {/* <div className="demo-container">
+        
+      </div> */}
     </div>
   );
 }
