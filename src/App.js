@@ -6,7 +6,7 @@ import Demo from "./components/Demo/Demo";
 import HomePage from "./components/HomePage/HomePage";
 import Plans from "./components/Plans/Plans";
 import SignUp from "./components/SignUp/SignUp";
-import SignIn from "./components/SignIn/SignIn";
+// import SignIn from "./components/SignIn/SignIn";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/demo" exact component={Demo} />
         <Route path="/plans" exact component={Plans} />
         <Route path="/sign-up" exact component={SignUp} />
-        <Route path="/sign-in" exact component={SignIn} />
+        {/* <Route path="/sign-in" exact component={SignIn} /> */}
       </Switch>
     </BrowserRouter>
   );
