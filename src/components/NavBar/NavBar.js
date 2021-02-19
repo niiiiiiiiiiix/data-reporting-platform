@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import { WiDaySunny } from "react-icons/wi";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./NavBar.css";
 
@@ -14,7 +13,10 @@ function NavBar() {
     <div className="navbar">
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo">
-          <WiDaySunny className="navbar-icon" />
+          <img
+            className="sunny-icon"
+            src={process.env.PUBLIC_URL + "/images/sun.svg"}
+          />
           SUNNY
         </Link>
         <div className="menu-icon" onClick={handleClick}>
