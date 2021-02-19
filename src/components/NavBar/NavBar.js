@@ -12,10 +12,11 @@ function NavBar() {
   return (
     <div className="navbar">
       <div className="navbar-container container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img
             className="sunny-icon"
             src={process.env.PUBLIC_URL + "/images/sun.svg"}
+            alt=""
           />
           SUNNY
         </Link>
