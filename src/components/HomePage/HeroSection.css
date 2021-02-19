@@ -22,6 +22,7 @@
   margin-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
+  flex: 1;
   max-width: 50%;
   flex-basis: 50%;
 }
@@ -56,9 +57,6 @@
 
 .darkBg {
   background-color: #152238;
-  padding-top: 100px;
-  display: flex;
-  justify-content: space-around;
 }
 
 .home-hero-subtitle {
@@ -74,7 +72,7 @@
 
 .home-hero-img {
   max-width: 95%;
-  margin: 0 0 0 10px;
+  margin: 0;
   padding-right: 0;
 }
 
@@ -96,6 +94,11 @@
   .home-hero-text-wrapper {
     padding-bottom: 65px;
   }
+
+  .home-hero-subtitle {
+    max-width: 100%;
+  }
+
   .col {
     max-width: 100%;
     flex-basis: 100%;
