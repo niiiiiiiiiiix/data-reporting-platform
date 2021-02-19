@@ -3,24 +3,12 @@ import { Link } from "react-router-dom";
 import { WiDaySunny } from "react-icons/wi";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./NavBar.css";
-import { Button } from "../Button/Button.js";
 
 function NavBar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 767) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  window.addEventListener("resize", showButton);
 
   return (
     <div className="navbar">
@@ -48,49 +36,23 @@ function NavBar() {
               Plans
             </Link>
           </li>
-          <li className="nav-btn">
-            {button ? (
-              <Link to="/sign-up" className="btn-link">
-                <Button
-                  buttonStyle="btn-style-outline"
-                  buttonFont="btn-font-default"
-                >
-                  Sign Up
-                </Button>
-              </Link>
-            ) : (
-              <Link to="/sign-up" className="btn-link">
-                <Button
-                  buttonStyle="btn-style-outline"
-                  buttonSize="btn-size-mobile"
-                  buttonFont="btn-font-default"
-                >
-                  Sign Up
-                </Button>
-              </Link>
-            )}
+          <li className="nav-item">
+            <Link
+              to="/sign-up"
+              className="nav-links sign-up"
+              onClick={closeMobileMenu}
+            >
+              Sign Up
+            </Link>
           </li>
-          <li className="nav-btn">
-            {button ? (
-              <Link to="/sign-in" className="btn-link">
-                <Button
-                  buttonStyle="btn-style-outline"
-                  buttonFont="btn-font-default"
-                >
-                  Sign In
-                </Button>
-              </Link>
-            ) : (
-              <Link to="/sign-in" className="btn-link">
-                <Button
-                  buttonStyle="btn-style-outline"
-                  buttonSize="btn-size-mobile"
-                  buttonFont="btn-font-default"
-                >
-                  Sign In
-                </Button>
-              </Link>
-            )}
+          <li className="nav-item">
+            <Link
+              to="/sign-in"
+              className="nav-links sign-in"
+              onClick={closeMobileMenu}
+            >
+              Sign In
+            </Link>
           </li>
         </ul>
       </div>
