@@ -17,7 +17,7 @@
 
 .all-form-inputs {
   margin-bottom: 0.5rem;
-  width: 50%;
+  width: 60%;
 }
 
 .all-form-inputs p {
@@ -127,9 +127,16 @@
 
 @media (max-width: 767px) {
   .all-form-inputs {
-    width: 70%;
+    width: 60%;
   }
   .form-input-btn {
     width: 40%;
   }
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 0.8rem;
+  padding-top: 0.4rem;
+  padding-left: 0.6rem;
 }

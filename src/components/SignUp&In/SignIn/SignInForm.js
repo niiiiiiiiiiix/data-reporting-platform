@@ -1,5 +1,5 @@
 import React from "react";
-import "./SignInForm.css";
+import "../SignInUp.css";
 import useForm from "./useForm";
 import validateInfo from "./validateInfo";
 
