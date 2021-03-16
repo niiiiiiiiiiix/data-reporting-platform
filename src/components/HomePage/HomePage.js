@@ -1,6 +1,11 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import { HomeObjOne, HomeObjThree, HomeObjTwo } from "./HomeObjData";
+import {
+  HomeObjOne,
+  HomeObjThree,
+  HomeObjTwo,
+  HomeObjFour,
+} from "./HomeObjData";
 import "./HomePage.css";
 
 const HomePage = () => {
