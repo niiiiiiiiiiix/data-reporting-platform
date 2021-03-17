@@ -27,11 +27,7 @@ const SignUpForm = () => {
       })}
       onSubmit={(values) => {
         // swal("SUCCESS!! :-)\n\n" + JSON.stringify(fields, null, 4));
-        // let finalValues = {
-        //   username: values.username,
-        //   password: values.password,
-        // };
-        // console.log(finalValues);
+        console.log(values);
         axios
           .post("http://localhost:5000/user/signup", values)
           .then((response) => {
@@ -39,7 +35,7 @@ const SignUpForm = () => {
             alert("Success!");
           })
           .catch((error) => {
-            alert("Error! Please try a different username or email!");
+            alert("Error! Please try a different username or email!" + error);
           });
       }}
     >
