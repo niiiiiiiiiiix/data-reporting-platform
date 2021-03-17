@@ -2,6 +2,7 @@ import "../SignInUp.css";
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 const SignUpForm = () => {
   return (
@@ -24,9 +25,17 @@ const SignUpForm = () => {
           .oneOf([Yup.ref("password"), null], "Passwords must match")
           .required("Confirm Password is required"),
       })}
-      onSubmit={() => {
+      onSubmit={(values) => {
         // swal("SUCCESS!! :-)\n\n" + JSON.stringify(fields, null, 4));
-        alert("success!");
+        axios
+          .post("http://localhost:5000/user/signup", values)
+          .then((response) => {
+            console.log(response);
+            alert("Success!");
+          })
+          .catch((error) => {
+            alert("Error! Please try a different username or email!");
+          });
       }}
     >
       {({ errors, status, touched }) => (
