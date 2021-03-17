@@ -27,6 +27,11 @@ const SignUpForm = () => {
       })}
       onSubmit={(values) => {
         // swal("SUCCESS!! :-)\n\n" + JSON.stringify(fields, null, 4));
+        // let finalValues = {
+        //   username: values.username,
+        //   password: values.password,
+        // };
+        // console.log(finalValues);
         axios
           .post("http://localhost:5000/user/signup", values)
           .then((response) => {
