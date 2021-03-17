@@ -53,7 +53,7 @@ const Demo = () => {
                       <td>{item.salesPrice}</td>
                       <td>{item.lastUpdated}</td>
                       <td>
-                        <ImCross />
+                        <ImCross className="delete-button" />
                       </td>
                     </tr>
                   );

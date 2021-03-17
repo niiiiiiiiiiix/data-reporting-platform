@@ -70,3 +70,7 @@ th,
 td {
   border: 1px solid black;
 }
+
+.delete-button:hover {
+  cursor: pointer;
+}
