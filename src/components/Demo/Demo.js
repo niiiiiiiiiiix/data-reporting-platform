@@ -27,9 +27,13 @@ const Demo = () => {
     <div className="bodyy">
       <div className="demo-container">
         <h1>This is your demo page</h1>
-        <div className="action-bar">Action Bar for sort/filter/refresh</div>
+        <div>
+          <ul className="action-bar">
+            <li className="add-wishlist-button action-bar-text">Add item</li>
+            <li className="refresh-button action-bar-text">Refresh wishlist</li>
+          </ul>
+        </div>
         <div className="wishlist">
-          {isLoading && <Loader />}
           <table className="table-content">
             <thead>
               <tr>
@@ -40,6 +44,7 @@ const Demo = () => {
                 <th>Delete</th>
               </tr>
             </thead>
+            {isLoading && <Loader />}
             <tbody>
               {wishlist.map((item) => {
                 return (
