@@ -1,4 +1,9 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 
-export default () => <Loader type="Puff" color="#00BFFF" />;
+const wishlistLoader = () => {
+  return <Loader type="Puff" color="#00BFFF" />;
+};
+// export default () => <Loader type="Puff" color="#00BFFF" />;
+
+export default wishlistLoader;
